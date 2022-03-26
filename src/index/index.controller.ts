@@ -1,4 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
 
 @Controller()
-export class IndexController {}
+export class IndexController {
+  @Get()
+  getIndex(): object {
+    return { halo: 'Dunia' };
+  }
+}
