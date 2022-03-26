@@ -5,6 +5,6 @@ export class IndexController {
   @Get()
   @Render('Index')
   getIndex(): object {
-    return { halo: 'Dunia' };
+    return { page: 'Halaman Index' };
   }
 }
