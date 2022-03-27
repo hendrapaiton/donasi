@@ -5,6 +5,6 @@ export class IndexController {
   @Get()
   @Render('Index')
   getIndex(): object {
-    return { page: 'Halaman Index' };
+    return { identitas: 'Formulir Donasi' };
   }
 }
