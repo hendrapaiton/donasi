@@ -100,6 +100,11 @@
                 </button>
               </div>
             </div>
+            <div class="field">
+              <div class="control">
+                <p class="has-text-danger is-size-5 is-hidden">Keterangan</p>
+              </div>
+            </div>
           </span>
         </form>
       </div>
