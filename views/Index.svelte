@@ -17,7 +17,7 @@
                 <input
                   class="input"
                   type="text"
-                  placeholder="Nama donatur yang akan ditampilkan"
+                  placeholder="Nama donatur yang ditampilkan"
                   id="tanggal"
                 />
                 <span class="icon is-small is-left">
@@ -26,12 +26,12 @@
               </div>
             </div>
             <div class="field">
-              <label class="label" for="tanggal">Tempat Tinggal</label>
+              <label class="label" for="tanggal">Blok Rumah</label>
               <div class="control has-icons-left">
                 <input
                   class="input"
                   type="text"
-                  placeholder="Alamat rumah atau domisili"
+                  placeholder="Nomor blok rumah tempat tinggal"
                   id="tanggal"
                 />
                 <span class="icon is-small is-left">
@@ -79,14 +79,6 @@
                 <label class="radio">
                   <input type="radio" />
                   Bukber
-                </label>
-              </div>
-            </div>
-            <div class="field mt-5">
-              <div class="control">
-                <label class="checkbox">
-                  <input type="checkbox" />
-                  Simpan dengan nama "<b>Hamba Allah</b>"
                 </label>
               </div>
             </div>
