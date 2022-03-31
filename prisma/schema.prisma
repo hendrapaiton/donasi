@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model jadwal {
+  id        Int         @id(map: "jadwal_pk") @default(autoincrement())
+  tanggal   DateTime    @db.Date
+  sumbangan sumbangan[]
+}
+
+model paket {
+  id        Int         @id(map: "paket_pk") @default(autoincrement())
+  jenis     String      @db.VarChar
+  jumlah    Int
+  nominal   Decimal     @db.Decimal
+  sumbangan sumbangan[]
+}
+
+model pengguna {
+  id       Int    @id(map: "pengguna_pk") @default(autoincrement())
+  username String @db.VarChar
+  password String @db.VarChar
+}
+
+model sumbangan {
+  id           Int    @id(map: "sumbangan_pk") @default(autoincrement())
+  nama_lengkap String @db.VarChar
+  blok_rumah   String @db.VarChar
+  nomor_kontak Int
+  paket_id     Int
+  jadwal_id    Int
+  jadwal       jadwal @relation(fields: [jadwal_id], references: [id], onDelete: Cascade, map: "sumbangan_fk_jadwal")
+  paket        paket  @relation(fields: [paket_id], references: [id], onDelete: Cascade, map: "sumbangan_fk_paket")
+}
