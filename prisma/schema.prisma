@@ -8,9 +8,9 @@ datasource db {
 }
 
 model jadwal {
-  id        Int         @id(map: "jadwal_pk") @default(autoincrement())
-  tanggal   DateTime    @db.Date
-  sumbangan sumbangan[]
+  id        Int        @id(map: "jadwal_pk") @default(autoincrement())
+  tanggal   DateTime   @db.Date
+  sumbangan sumbangan?
 }
 
 model paket {
@@ -33,7 +33,7 @@ model sumbangan {
   blok_rumah   String @db.VarChar
   nomor_kontak Int
   paket_id     Int
-  jadwal_id    Int
+  jadwal_id    Int    @unique(map: "sumbangan_un")
   jadwal       jadwal @relation(fields: [jadwal_id], references: [id], onDelete: Cascade, map: "sumbangan_fk_jadwal")
   paket        paket  @relation(fields: [paket_id], references: [id], onDelete: Cascade, map: "sumbangan_fk_paket")
 }
