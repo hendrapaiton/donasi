@@ -1,4 +1,5 @@
 import { Body, Controller, Get, Post, Redirect, Render } from '@nestjs/common';
+import { CreateIndex } from './createIndex.dto';
 import { IndexService } from './index.service';
 
 @Controller()
@@ -13,7 +14,7 @@ export class IndexController {
 
   @Post()
   @Redirect('/')
-  async keteranganIndex(@Body() body) {
+  async keteranganIndex(@Body() body: CreateIndex) {
     console.log(body);
   }
 }
