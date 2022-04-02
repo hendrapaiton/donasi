@@ -1,111 +1,95 @@
-<html lang='en'>
-  <head>
-    <meta charset='UTF-8' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-    {{> head}}
-    <title>{{message}}</title>
-  </head>
-  <body>
-    <section class='hero is-fullheight'>
-      <div class='hero-body'>
-        <div class='container'>
-          <h1 class='title has-text-centered'>Formulir Donasi Ramadhan</h1>
-          <form class='columns'>
-            <span class='column'>
-              <div class='field'>
-                <label class='label' for='nama'>Nama Lengkap</label>
-                <div class='control has-icons-left'>
-                  <input
-                    class='input'
-                    type='text'
-                    placeholder='Nama donatur yang ditampilkan'
-                    id='nama'
-                  />
-                  <span class='icon is-small is-left'>
-                    <i class='fas fa-user'></i>
-                  </span>
-                </div>
-              </div>
-              <div class="field">
-                <label class="label" for="blok">Blok Rumah</label>
-                <div class="control has-icons-left">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Nomor blok rumah tempat tinggal"
-                    id="blok"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-house"></i>
-                  </span>
-                </div>
-              </div>
-              <div class="field">
-                <label class="label" for="nohp">Nomor Handphone</label>
-                <div class="control has-icons-left">
-                  <input
-                    class="input"
-                    type="text"
-                    placeholder="Kontak yang bisa dihubungi"
-                    id="nohp"
-                  />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-phone"></i>
-                  </span>
-                </div>
-              </div>
-            </span>
-            <span class="column">
-            <div class="field">
-              <label class="label" for="tanggal">Jadwal Pelaksanaan</label>
-              <div class="control has-icons-left">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Tanggal donasi yang dipilih"
-                  id="tanggal"
-                />
-                <span class="icon is-small is-left">
-                  <i class="fas fa-calendar"></i>
+<html lang='id'>
+
+<head>
+  <meta charset='UTF-8' />
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  {{> head}}
+  <title>{{message}}</title>
+</head>
+
+<body>
+  <section class='hero is-fullheight'>
+    <div class='hero-body'>
+      <div class='container'>
+        <h1 class='title has-text-centered'>Formulir Donasi Ramadhan</h1>
+        <form class='columns' method='post' action='/'>
+          <span class='column'>
+            <div class='field'>
+              <label class='label'>Nama Lengkap</label>
+              <div class='control has-icons-left'>
+                <input class='input' type='text' placeholder='Nama donatur yang ditampilkan' name='nama' />
+                <span class='icon is-small is-left'>
+                  <i class='fas fa-user'></i>
                 </span>
               </div>
             </div>
-            <div class="field">
-              <label class="label" for="donasi">Pilihan Donasi</label>
-              <div class="control">
-                <label class="radio">
-                  <input type="radio" />
+            <div class='field'>
+              <label class='label'>Blok Rumah</label>
+              <div class='control has-icons-left'>
+                <input class='input' type='text' placeholder='Nomor blok rumah tempat tinggal' name='blok' />
+                <span class='icon is-small is-left'>
+                  <i class='fas fa-house'></i>
+                </span>
+              </div>
+            </div>
+            <div class='field'>
+              <label class='label'>Nomor Handphone</label>
+              <div class='control has-icons-left'>
+                <input class='input' type='text' placeholder='Kontak yang bisa dihubungi' name='nohp' />
+                <span class='icon is-small is-left'>
+                  <i class='fas fa-phone'></i>
+                </span>
+              </div>
+            </div>
+          </span>
+          <span class='column'>
+            <div class='field'>
+              <label class='label'>Jadwal Pelaksanaan</label>
+              <div class='control has-icons-left'>
+                <input class='input' type='text' placeholder='Tanggal donasi yang dipilih' name='jadwal' />
+                <span class='icon is-small is-left'>
+                  <i class='fas fa-calendar'></i>
+                </span>
+              </div>
+            </div>
+            <div class='field'>
+              <label class='label'>Pilihan Donasi</label>
+              <div class='control'>
+                <label class='radio'>
+                  <input type='radio' value="takjil" name="paket" checked />
                   Takjil
                 </label>
-                <label class="radio">
-                  <input type="radio" />
+                <label class='radio'>
+                  <input type='radio' value="bukber" name="paket" />
                   Bukber
                 </label>
               </div>
             </div>
-            <div class="field is-grouped">
-              <div class="control">
-                <button class="button is-danger is-light is-normal">
-                  <span class="icon">
-                    <i class="fa-solid fa-arrows-rotate"></i>
+            <div class='field is-grouped'>
+              <div class='control'>
+                <button class='button is-danger is-light is-normal'>
+                  <span class='icon'>
+                    <i class='fa-solid fa-arrows-rotate'></i>
                   </span>
                   <span>Reset</span>
                 </button>
               </div>
-              <div class="control is-expanded">
-                <button class="button is-primary is-fullwidth is-normal">
-                  <span class="icon">
-                    <i class="fas fa-floppy-disk"></i>
+              <div class='control is-expanded'>
+                <button type="submit" class='button is-primary is-fullwidth is-normal'>
+                  <span class='icon'>
+                    <i class='fas fa-floppy-disk'></i>
                   </span>
                   <span>Tetapkan Jadwal</span>
                 </button>
               </div>
             </div>
-            </span>
-          </form>
-        </div>
+          </span>
+        </form>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+  {{> script}}
+</body>
+
 </html>

@@ -1,0 +1,10 @@
+<script src='/js/datepicker.min.js'></script>
+<script type="application/javascript">
+  const elem = document.querySelector('input[name="jadwal"]');
+  const datepicker = new Datepicker(elem, {
+    format: 'dd/mm/yyyy',
+    minDate: '03-04-2022',
+    maxDate: '02-05-2022',
+    datesDisabled: [],
+  });
+</script>
